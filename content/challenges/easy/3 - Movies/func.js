@@ -6,4 +6,23 @@
 
 // Return True or False in every situation
 module.exports = (customerMoney, isMovieFull, rating, age, isParentWith) => {
-};
+    let willSellTicket;
+
+    if (customerMoney >= 8 && !isMovieFull) {
+        if ((rating === 'PG' || rating === 'R') && (age >= 17 || isParentWith)) {
+            console.log('I can sell a ticket.')
+            willSellTicket = true;
+            return willSellTicket;
+        } else {
+            console.log('I cannot sell a ticket.')
+            willSellTicket = false;
+            return willSellTicket;
+        }
+    } else {
+        console.log('I cannot sell a ticket.')
+        willSellTicket = false;
+        return willSellTicket;
+    }
+}
+
+console.log(module.exports(9.5, false, 'R', 16, true));
