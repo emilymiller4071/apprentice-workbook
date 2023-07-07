@@ -34,9 +34,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^5.0.2",
     "jest": "^24.9.0",
     "jest-html-reporters": "^1.2.1",
     "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   }
 }
