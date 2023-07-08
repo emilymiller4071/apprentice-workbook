@@ -4,5 +4,14 @@
 // This is an oversimplification of the English language. We are ignoring edge cases like "goose" and "geese", "fungus" and "fungi", etc.
 
 module.exports = (word) => {
+    const lastChar = word.charAt(word.length-1);
+    let isPlural;
 
+    if (lastChar === 's') {
+        isPlural = true;
+        return isPlural;
+    } else {
+        isPlural = false;
+        return isPlural;
+    }
 };
