@@ -1,14 +1,33 @@
-// Create a function that takes a string, removes all "special" characters 
+// Create a functcharacteron that takes a strcharacterng, removes all "speccharacteral" characters 
 // (e.g. !, @, #, $, %, ^, &, \, *, (, )) and 
-// returns the new string. The only non-alphanumeric characters 
+// returns the new strcharacterng. The only non-alphanumercharacterc characters 
 // allowed are dashes -, underscores _ and spaces.
+
+    // str = str.replace(/[&\/\\#,+()$~%.'":*?<>{}!@%^=]/g, '');
+    //return str;
+
 
 module.exports = (str) => {
 
-    str = str.replace(/[&\/\\#,+()$~%.'":*?<>{}!@%^=]/g, '');
-    return str;
+    
+        const specialChars = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '=', '+', '.', '<', '>', '/', '|', '`', '~', ','];
+        let result = '';
+        
+      
+        for (let i = 0; i < str.length; i++) {
+            const char = str[i];
+            let isSpecialCharacter = false;
 
-    // testing criteria has a typo, that still expects the period '.'
-    // I hope that I'm not missing something in the instructions.
-    // I fixed the testing file on my own fork...
-}
+            for (let j = 0; j < specialChars.length; j++){
+                if (char === specialChars[j]) {
+                    isSpecialCharacter = true;
+                    break;
+                }
+            }
+
+            if (!isSpecialCharacter) {
+               result += char; 
+            }
+          }
+          return result;
+        };
