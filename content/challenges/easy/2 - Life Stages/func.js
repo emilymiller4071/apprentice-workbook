@@ -8,19 +8,22 @@
 // Greater than 30 is 'Dead'
 module.exports = (age) => {
 
-    switch(true) {
-        case (age < 2): return 'Baby';            
-            break;
-        case (age >= 2 && age < 13): return 'Kid';
-            break;
-        case (age >= 13 && age <= 19): return 'Teen';
-            break;
-        case (age > 19 && age <=30): return 'Young Adult';
-            break;
-        case (age > 30): return 'Dead';
-            break;
-        default: return 'Unknown';
+    let stageOfLife = '';
+
+    if (age < 2) {
+        stageOfLife = 'Baby';
+    } else if (age >=2 && age < 13) {
+        stageOfLife = 'Kid';
+    } else if (age >=13 && age < 20) {
+        stageOfLife = 'Teen';
+    } else if (age >= 20 && age < 30) {
+        stageOfLife = 'Young Adult';
+    } else if (age >= 30) {
+        stageOfLife = 'Dead';
+    } else {
+        stageOfLife = 'Unknown';
     }
+    return stageOfLife;
 }
 
 
