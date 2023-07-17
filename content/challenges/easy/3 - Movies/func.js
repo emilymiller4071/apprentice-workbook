@@ -24,5 +24,3 @@ module.exports = (customerMoney, isMovieFull, rating, age, isParentWith) => {
         return willSellTicket;
     }
 }
-
-console.log(module.exports(9.5, false, 'R', 16, true));

@@ -5,3 +5,10 @@
 // if the rating (PG, R) is R and the customer is 17 or older OR a parent is with them
 
 // Return True or False in every situation
+
+module.exports = (customerMoney, isMovieFull, rating, age, isParentWith) => {
+
+    let willSellTicket = customerMoney >= 8 && !isMovieFull && (rating === 'PG' || rating === 'R') && (age >= 17 || isParentWith);
+    
+    return willSellTicket;
+}
