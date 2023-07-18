@@ -10,5 +10,3 @@ module.exports = (num) => {
    }
    return factorial;
 };
-
-console.log(module.exports(3));
