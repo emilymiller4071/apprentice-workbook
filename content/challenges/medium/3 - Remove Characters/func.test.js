@@ -1,4 +1,4 @@
-const func = require('./func.js');
+const func = require('./func2.js');
 
 test('Remove the "!"', () => {
     expect(func("The quick brown fox!")).toEqual("The quick brown fox");
