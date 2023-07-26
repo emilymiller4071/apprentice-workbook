@@ -1,4 +1,4 @@
-const func = require('./func.js');
+const func = require('./func2.js');
 
 test('Expect true, is isogram', () => {
     expect(func("Algorism")).toEqual(true);
