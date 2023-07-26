@@ -1,4 +1,4 @@
-const func = require('./func.js');
+const func = require('./func2.js');
 
 test('Expect result to be [9, -2, 15]', () => {
     expect(func([3, 4, 9], 3)).toEqual([9, -2, 15]);
