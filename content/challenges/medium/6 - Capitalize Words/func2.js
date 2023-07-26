@@ -3,3 +3,13 @@
 // Return the newly formatted string.
 // Notes: 
 //   - You can expect a valid string for each test case.
+
+module.exports = (str) => {
+    const words = str.split(' ');
+
+    let capitalizedString = words
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+    return capitalizedString;
+}
