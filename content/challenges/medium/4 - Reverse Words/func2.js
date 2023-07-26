@@ -5,19 +5,34 @@
 //   - You can expect a valid string to be provided for each test case.
 
 module.exports = (str) => {
-    // use spaces as delimiter
+
     const words = str.split(' ');
 
-    // use map to create a new array called reversedWords, use callback to return the word in the
-    // correct format
-    const reversedWords = words.map((word) => {
-        if (word.match(/\w{5,}/)) {
+    let reversedLongWords = words.map((word) => {
+        if (word.length >= 5) {
             return word.split('').reverse().join('');
-            // returns word in reverse if it has 5 or more characters
-        } else {
+        }else {
             return word;
         }
-  });
-  // joins all words putting spaces between
-  return reversedWords.join(' ');
-}
+    })
+    return reversedLongWords.join(' ');
+  
+    }
+
+
+    //     // use spaces as delimiter
+//     const words = str.split(' ');
+
+//     // use map to create a new array called reversedWords, use callback to return the word in the
+//     // correct format
+//     const reversedWords = words.map((word) => {
+//         if (word.match(/\w{5,}/)) {
+//             return word.split('').reverse().join('');
+//             // returns word in reverse if it has 5 or more characters
+//         } else {
+//             return word;
+//         }
+//   });
+//   // joins all words putting spaces between
+//   return reversedWords.join(' ');
+//}
